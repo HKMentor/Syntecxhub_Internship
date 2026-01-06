@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hooria Fatima | Frontend Developer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="container nav">
+    <h1 class="logo">Hooria<span>.</span></h1>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</header>
+
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <h2>Hello, I'm</h2>
+      <h1 class="hero-name">Hooria Fatima</h1>
+      <p>Frontend Developer | HTML • CSS • Responsive Design</p>
+      <a href="#projects" class="primary-btn">View My Work</a>
+    </div>
+    <div class="hero-image">
+      <img src="images/hooria.jpeg" alt="Hooria Fatima">
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="section about">
+  <div class="container about-box">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      I am a passionate Frontend Developer currently completing my internship at Syntecxhub. I specialize in creating clean, modern, and responsive websites that provide excellent user experiences.
+    </p>
+    <p>
+      My focus is on writing maintainable code, building smooth animations, and continuously improving my frontend skills.
+    </p>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="section gray">
+  <div class="container">
+    <h2 class="section-title center">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">HTML5</div>
+      <div class="skill-card">CSS3</div>
+      <div class="skill-card">React.JS</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">UX / UI Design</div>
+       <div class="skill-card">Bootstrap</div>
+      <div class="skill-card">Git & Github</div>
+      <div class="skill-card">MS Excel & Typing</div>
+      <div class="skill-card">Team Management</div>
+      <div class="skill-card">Good Communication </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="section">
+  <div class="container">
+    <h2 class="section-title center">Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="images/proj1.jpg" alt="">
+        <div class="project-overlay">
+          <h3> Wheather Card</h3>
+          <a href="https://wheathercard.netlify.app/" target="_blank">View Project</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images/proj2.png" alt="">
+        <div class="project-overlay">
+          <h3>Number Guessing Game</h3>
+          <a href="https://number-guess-game-byhk.netlify.app/" target="_blank">View Project</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images/proj3.jpg" alt="">
+        <div class="project-overlay">
+          <h3>Website </h3>
+          <a href="https://hk-website.netlify.app/" target="_blank">View Project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section gray">
+  <div class="container contact-container">
+    <h2 class="section-title center">Contact Me</h2>
+    <div class="contact-grid">
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <p>Email: <a href="mailto:infohkmentor@gmail.com">infohkmentor@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/hooria-fatima-54753927b/" target="_blank">@hooria-fatima</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/itss_hooria/" target="_blank">@itss_hooria</a></p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/hooria-fatima-54753927b/" target="_blank"><img src="images/Inkdn.png" alt="LinkedIn"></a>
+          <a href="https://www.instagram.com/itss_hooria/" target="_blank"><img src="images/Instagram.png" alt="Instagram"></a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <form action="#" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit" class="primary-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>© 2026 Hooria Fatima | Frontend Intern at Syntecxhub</p>
+</footer>
+
+<script>
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  menuToggle.classList.toggle('active');
+});
+</script>
+
+</body>
+</html>
