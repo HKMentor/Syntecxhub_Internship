@@ -11,7 +11,7 @@
 <!-- Header -->
 <header class="header">
   <div class="container nav">
-    <h1 class="logo">Hooria<span>.</span></h1>
+    <h1 class="logo">Portfolio<span>.</span></h1>
     <nav class="nav-links">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -28,12 +28,12 @@
 
 
 <!-- Hero -->
-<section class="hero">
+<section class="hero   " >
   <div class="container hero-grid">
     <div class="hero-text">
       <h2>Hello, I'm</h2>
       <h1 class="hero-name">Hooria Fatima</h1>
-      <p>Frontend Developer | HTML • CSS • Responsive Design</p>
+      <p class="typing"></p>
       <a href="#projects" class="primary-btn">View My Work</a>
     </div>
     <div class="hero-image">
@@ -43,7 +43,7 @@
 </section>
 
 <!-- About -->
-<section id="about" class="section about">
+<section id="about" class="section about   reveal">
   <div class="container about-box">
     <h2 class="section-title">About Me</h2>
     <p>
@@ -56,7 +56,7 @@
 </section>
 
 <!-- Skills -->
-<section id="skills" class="section gray">
+<section id="skills" class="section gray   reveal">
   <div class="container">
     <h2 class="section-title center">Skills</h2>
     <div class="skills-grid">
@@ -75,7 +75,7 @@
 </section>
 
 <!-- Projects -->
-<section id="projects" class="section">
+<section id="projects" class="section   reveal">
   <div class="container">
     <h2 class="section-title center">Projects</h2>
     <div class="projects-grid">
@@ -105,7 +105,7 @@
 </section>
 
 <!-- Contact -->
-<section id="contact" class="section gray">
+<section id="contact" class="section gray    reveal">
   <div class="container contact-container">
     <h2 class="section-title center">Contact Me</h2>
     <div class="contact-grid">
@@ -138,15 +138,8 @@
   <p>© 2026 Hooria Fatima | Frontend Intern at Syntecxhub</p>
 </footer>
 
-<script>
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+<script src="./main.js"></script>
 
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  menuToggle.classList.toggle('active');
-});
-</script>
 
 </body>
 </html>
