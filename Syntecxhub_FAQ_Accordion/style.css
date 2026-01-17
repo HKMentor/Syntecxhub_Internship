@@ -1,0 +1,239 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* ================= BODY ================= */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 15px;
+  line-height: 1.6;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  width: 100%;
+  max-width: 860px;
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 28px;
+  padding: 48px 42px;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+}
+
+/* ================= HEADER ================= */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+  color: #1f2937;
+}
+
+.header span {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header p {
+  color: #6b7280;
+  font-size: 15px;
+}
+
+/* ================= CONTROLS ================= */
+.controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 36px;
+}
+
+#search {
+  flex: 1;
+  padding: 15px 18px;
+  border-radius: 16px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  outline: none;
+  background: #f9fafb;
+}
+
+#search:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+}
+
+#themeToggle {
+  border: none;
+  padding: 0 12px;
+  border-radius: 16px;
+  font-size: 18px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(102, 126, 234, 0.35);
+}
+
+#themeToggle:hover {
+  transform: translateY(-2px);
+}
+
+/* ================= FAQ LIST ================= */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ================= FAQ CARD ================= */
+.faq-card {
+  background: #f8fafc;
+  border-radius: 22px;
+  padding-left: 8px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.faq-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 6px;
+  background: linear-gradient(180deg, #667eea, #764ba2);
+}
+
+.faq-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* ================= QUESTION ================= */
+.faq-title {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 24px 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.faq-title:hover {
+  color: #6366f1;
+}
+
+.faq-title i {
+  font-size: 22px;
+  transition: transform 0.35s ease, color 0.35s ease;
+}
+
+/* ================= ANSWER ================= */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 26px;
+  color: #4b5563;
+  font-size: 14.7px;
+  line-height: 1.85;
+  transition: all 0.45s ease;
+}
+
+/* ================= ACTIVE ================= */
+.faq-card.active .faq-content {
+  max-height: 260px;
+  padding: 0 26px 26px;
+}
+
+.faq-card.active .faq-title i {
+  transform: rotate(45deg);
+  color: #667eea;
+}
+
+/* ================= DARK MODE ================= */
+body.dark {
+  background: linear-gradient(135deg, #020617, #020617);
+}
+
+body.dark .container {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+body.dark .header h1 {
+  color: #f9fafb;
+}
+
+body.dark .header p {
+  color: #cbd5f5;
+}
+
+body.dark #search {
+  background: #020617;
+  border: 1px solid #334155;
+  color: #e5e7eb;
+}
+
+body.dark #search::placeholder {
+  color: #94a3b8;
+}
+
+body.dark .faq-card {
+  background: #020617;
+}
+
+body.dark .faq-title {
+  color: #f9fafb;
+}
+
+body.dark .faq-content {
+  color: #cbd5f5;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .container {
+    padding: 36px 28px;
+  }
+  .header h1 {
+    font-size: 32px;
+  }
+  .faq-title {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 28px 20px;
+  }
+  .header h1 {
+    font-size: 28px;
+  }
+  .faq-title {
+    font-size: 14px;
+  }
+  #search {
+    padding: 12px 14px;
+  }
+}
