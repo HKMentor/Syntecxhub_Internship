@@ -46,41 +46,40 @@
     <div class="col">Done: <span id="count-done">0</span></div>
   </div>
 
-  <!-- BOARD -->
-  <div class="row g-4">
+ 
 
-    <!-- TO DO -->
-    <div class="col-md-4">
-      <div class="kanban-column">
-        <h5><i class="bi bi-list-task"></i> To Do</h5>
-        <div class="task-list" id="todo"></div>
-        <button class="btn btn-outline-primary w-100 mt-2" onclick="openModal('todo')">
-          <i class="bi bi-plus-circle"></i> Add Task
-        </button>
-      </div>
-    </div>
+    
+   <!-- BOARD -->
+<div class="kanban-wrapper d-flex g-4">
 
-    <!-- DOING -->
-    <div class="col-md-4">
-      <div class="kanban-column">
-        <h5><i class="bi bi-arrow-repeat"></i> Doing</h5>
-        <div class="task-list" id="doing"></div>
-        <button class="btn btn-outline-warning w-100 mt-2" onclick="openModal('doing')">
-          <i class="bi bi-plus-circle"></i> Add Task
-        </button>
-      </div>
-    </div>
+  <!-- TO DO -->
+  <div class="kanban-column flex-shrink-0" style="min-width:300px;">
+    <h5><i class="bi bi-list-task"></i> To Do</h5>
+    <div class="task-list" id="todo"></div>
+    <button class="btn btn-outline-primary w-100 mt-2" onclick="openModal('todo')">
+      <i class="bi bi-plus-circle"></i> Add Task
+    </button>
+  </div>
 
-    <!-- DONE -->
-    <div class="col-md-4">
-      <div class="kanban-column">
-        <h5><i class="bi bi-check-circle-fill"></i> Done</h5>
-        <div class="task-list" id="done"></div>
-      </div>
-    </div>
+  <!-- DOING -->
+  <div class="kanban-column flex-shrink-0" style="min-width:300px;">
+    <h5><i class="bi bi-arrow-repeat"></i> Doing</h5>
+    <div class="task-list" id="doing"></div>
+    <button class="btn btn-outline-warning w-100 mt-2" onclick="openModal('doing')">
+      <i class="bi bi-plus-circle"></i> Add Task
+    </button>
+  </div>
+
+  <!-- DONE -->
+  <div class="kanban-column flex-shrink-0" style="min-width:300px;">
+    <h5><i class="bi bi-check-circle-fill"></i> Done</h5>
+    <div class="task-list" id="done"></div>
+  </div>
+
+</div>
+
 
   </div>
-</div>
 
 <!-- MODAL -->
 <div class="modal fade" id="taskModal">
