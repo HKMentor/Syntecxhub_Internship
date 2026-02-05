@@ -345,3 +345,111 @@ h2{ letter-spacing:0.6px; font-weight:700; color:var(--heading-color); transitio
 
 /* RESPONSIVE */
 @media (max-width:768px){ .task-list{ min-height:220px; } }
+
+/* ===============================
+   MOBILE FIRST IMPROVEMENTS
+================================ */
+
+/* Tablets & below */
+@media (max-width: 992px){
+  .kanban-column{
+    padding:16px;
+    border-radius:18px;
+  }
+
+  .task{
+    padding:14px 16px;
+    border-radius:16px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px){
+
+  body{
+    padding:12px;
+  }
+
+  h2{
+    font-size:20px;
+    text-align:center;
+    margin-bottom:12px;
+  }
+
+  /* Stack columns nicely */
+  .kanban-column{
+    margin-bottom:18px;
+  }
+
+  /* Horizontal scroll kanban (PRO LOOK) */
+  .kanban-wrapper{
+    display:flex;
+    gap:14px;
+    overflow-x:auto;
+    padding-bottom:10px;
+    scroll-snap-type:x mandatory;
+  }
+
+  .kanban-column{
+    min-width:85%;
+    scroll-snap-align:start;
+  }
+
+  /* Task list */
+  .task-list{
+    min-height:200px;
+    padding:6px;
+  }
+
+  /* Task card */
+  .task{
+    padding:14px;
+    margin-bottom:12px;
+    font-size:14px;
+  }
+
+  .task strong{
+    font-size:15px;
+  }
+
+  .task small{
+    font-size:11px;
+  }
+
+  /* Badge */
+  .badge{
+    font-size:10px;
+    padding:4px 8px;
+  }
+
+  /* Buttons */
+  .btn-outline-primary,
+  .btn-outline-warning{
+    width:100%;
+    margin-bottom:8px;
+    font-size:14px;
+  }
+
+  /* Mode button */
+  .mode-btn{
+    padding:6px 8px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px){
+
+  h2{
+    font-size:18px;
+  }
+
+  .kanban-column{
+    min-width:92%;
+    padding:14px;
+  }
+
+  .task{
+    padding:12px;
+  }
+}
+
