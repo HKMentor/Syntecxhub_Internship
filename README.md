@@ -27,6 +27,10 @@ An interactive quiz application developed as part of **Internship Task 03 at Syn
 The app includes multiple-choice questions, a timer for each question, and smooth navigation between questions.  
 This project helped strengthen my JavaScript logic and DOM manipulation skills.
 
+
+## 3️⃣ Project 4 – kanban Board
+**Live Demo:**  
+https://task4-kanban-board-byhk.netlify.app/
 ---
 
 ## 🛠️ Technologies Used
