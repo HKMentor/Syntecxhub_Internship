@@ -30,7 +30,7 @@ This project helped strengthen my JavaScript logic and DOM manipulation skills.
 
 ## 3️⃣ Project 4 – kanban Board
 **Live Demo:**  
-https://task4-kanban-board-byhk.netlify.app/
+https://kandanboard-task4.netlify.app/
 ---
 
 ## 🛠️ Technologies Used
