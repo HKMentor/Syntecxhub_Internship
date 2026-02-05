@@ -46,14 +46,11 @@
     <div class="col">Done: <span id="count-done">0</span></div>
   </div>
 
- 
-
-    
-   <!-- BOARD -->
-<div class="kanban-wrapper d-flex g-4">
+ <!-- BOARD -->
+<div class="kanban-wrapper">
 
   <!-- TO DO -->
-  <div class="kanban-column flex-shrink-0" style="min-width:300px;">
+  <div class="kanban-column">
     <h5><i class="bi bi-list-task"></i> To Do</h5>
     <div class="task-list" id="todo"></div>
     <button class="btn btn-outline-primary w-100 mt-2" onclick="openModal('todo')">
@@ -62,7 +59,7 @@
   </div>
 
   <!-- DOING -->
-  <div class="kanban-column flex-shrink-0" style="min-width:300px;">
+  <div class="kanban-column">
     <h5><i class="bi bi-arrow-repeat"></i> Doing</h5>
     <div class="task-list" id="doing"></div>
     <button class="btn btn-outline-warning w-100 mt-2" onclick="openModal('doing')">
@@ -71,15 +68,14 @@
   </div>
 
   <!-- DONE -->
-  <div class="kanban-column flex-shrink-0" style="min-width:300px;">
+  <div class="kanban-column">
     <h5><i class="bi bi-check-circle-fill"></i> Done</h5>
     <div class="task-list" id="done"></div>
   </div>
 
 </div>
 
-
-  </div>
+</div>
 
 <!-- MODAL -->
 <div class="modal fade" id="taskModal">

@@ -347,26 +347,41 @@ h2{ letter-spacing:0.6px; font-weight:700; color:var(--heading-color); transitio
 @media (max-width:768px){ .task-list{ min-height:220px; } }
 
 
-/* MOBILE SCROLLABLE KANBAN */
+/* ===============================
+   MOBILE HORIZONTAL SCROLL
+================================ */
 .kanban-wrapper{
-  overflow-x:auto;
-  scroll-snap-type:x mandatory;
-  gap:16px;
-  padding-bottom:10px;
+  display: flex;              /* columns side by side */
+  gap: 16px;
+  overflow-x: auto;           /* horizontal scroll */
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
 }
 
 .kanban-column{
-  scroll-snap-align:start;
-  flex-shrink:0;
+  flex-shrink: 0;             /* prevent shrinking */
+  min-width: 300px;           /* minimum width of each column */
+  scroll-snap-align: start;
 }
 
-/* Mobile tweaks */
-@media (max-width:768px){
-  .kanban-wrapper{
-    display:flex;
-  }
+/* Scroll bar styling optional */
+.kanban-wrapper::-webkit-scrollbar{
+  height: 6px;
+}
+.kanban-wrapper::-webkit-scrollbar-thumb{
+  background: #888;
+  border-radius: 3px;
+}
+.kanban-wrapper::-webkit-scrollbar-thumb:hover{
+  background: #555;
+}
 
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px){
   .kanban-column{
-    min-width:85%; /* columns thoda chote ho jayein */
+    min-width: 85%;           /* mobile pe column thoda chota */
+  }
+  .task-list{
+    min-height: 200px;
   }
 }
