@@ -1,0 +1,347 @@
+/* ===============================
+   GLOBAL RESET
+================================ */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* ===============================
+   THEME VARIABLES
+================================ */
+:root{
+  --bg-gradient: linear-gradient(135deg, #1e3c72, #2a5298);
+  --column-bg: rgba(255,255,255,0.14);
+  --text-light: #ffffff;
+  --text-dark: #1f2937;
+  --muted-text: #6b7280;
+  --card-bg: #ffffff;
+  --heading-color: #ffffff;
+  --task-bg-dark: #0f172a;
+  --task-text-light: #e5e7eb;
+  --badge-color: #f8fafc;
+  --btn-text: #ffffff;
+  --btn-hover-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* ===============================
+   BODY
+================================ */
+body{
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  color: var(--text-light);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* ===============================
+   HEADING
+================================ */
+h2{
+  letter-spacing: 0.6px;
+  font-weight: 700;
+  color: var(--heading-color);
+  transition: color .4s ease;
+}
+
+/* ===============================
+   KANBAN COLUMN
+================================ */
+.kanban-column{
+  background: var(--column-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 22px;
+  padding: 20px;
+  height: 100%;
+  transition: transform .35s ease, box-shadow .35s ease, background .4s ease;
+}
+
+.kanban-column:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 28px 50px rgba(0,0,0,0.35);
+}
+
+/* ===============================
+   COLUMN TITLE
+================================ */
+.kanban-column h5{
+  font-weight: 600;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--heading-color);
+  transition: color .4s ease;
+}
+
+/* ===============================
+   TASK LIST
+================================ */
+.task-list{
+  min-height: 340px;
+  padding: 8px;
+  border-radius: 16px;
+  background:#f9fafb;
+  transition: background .3s ease;
+}
+
+.task-list.drag-over{
+  background:#e0f2fe;
+}
+
+/* ===============================
+   TASK CARD
+================================ */
+.task{
+  background: var(--task-bg-dark);
+  color: var(--task-text-light);
+  border-radius: 18px;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+  cursor: grab;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.38);
+  transition: transform .25s ease, box-shadow .25s ease, background .3s ease, color .3s ease;
+}
+
+.task:active{
+  cursor: grabbing;
+}
+
+.task:hover{
+  transform: scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+}
+
+/* ===============================
+   TASK CONTENT
+================================ */
+.task strong{
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--task-text-light);
+}
+
+.task small{
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* ===============================
+   PRIORITY STYLES
+================================ */
+.priority-high{
+  border-left: 6px solid #ef4444;
+}
+
+.priority-medium{
+  border-left: 6px solid #f59e0b;
+}
+
+.priority-low{
+  border-left: 6px solid #10b981;
+}
+
+/* ===============================
+   BADGE
+================================ */
+.badge{
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  text-transform: capitalize;
+  font-weight:500;
+  color: var(--badge-color);
+  transition: color .3s ease, background .3s ease;
+}
+
+/* ===============================
+   ICONS
+================================ */
+.task i{
+  font-size: 17px;
+  color:#9ca3af;
+  transition: color .2s, transform .2s;
+}
+
+.task i:hover{
+  color:#f87171;
+  transform: scale(1.2);
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+.btn-outline-primary,
+.btn-outline-warning{
+  border-radius:16px;
+  font-weight:500;
+  padding:8px 16px;
+  color: var(--btn-text);
+  transition: all .25s ease, box-shadow .25s ease;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-warning:hover{
+  transform: translateY(-2px);
+  box-shadow: var(--btn-hover-shadow);
+}
+
+/* ===============================
+   MODE BUTTON
+================================ */
+.mode-btn{
+  border-radius:50%;
+  padding:8px 10px;
+  transition: all .3s ease;
+}
+
+.mode-btn:hover{
+  transform: scale(1.1);
+}
+
+/* ===============================
+   MODAL
+================================ */
+.modal-content{
+  border-radius: 22px;
+  border: none;
+  box-shadow: 0 28px 50px rgba(0,0,0,.45);
+  transition: background .3s ease, color .3s ease;
+}
+
+.modal-header h5{
+  font-weight:600;
+}
+
+.modal-body input,
+.modal-body select{
+  border-radius:14px;
+  padding:10px;
+  transition: all .3s ease;
+}
+
+/* ===============================
+   LIGHT MODE
+================================ */
+.light-mode{
+  --bg-gradient: linear-gradient(135deg, #6e84bb, #438cc3);
+  --column-bg: #ffffff;
+  --text-light: #111827;          /* body text */
+  --heading-color: #111827;       /* h2 + column titles */
+  --task-bg-dark: #e2e8f0;        /* task card background */
+  --task-text-light: #111827;     /* task text */
+  --badge-color: #111827;         /* badge text */
+  --btn-text: #111827;            /* button text */
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px){
+  .task-list{
+    min-height: 220px;
+  }
+}
+/* GLOBAL RESET */
+*{ margin:0; padding:0; box-sizing:border-box; font-family:"Inter","Segoe UI",sans-serif;}
+
+/* THEME VARIABLES */
+:root{
+  --bg-gradient: linear-gradient(135deg,#1e3c72,#2a5298);
+  --column-bg: rgba(255,255,255,0.14);
+  --text-light:#fff;
+  --heading-color:#fff;
+  --task-bg-dark:#0f172a;
+  --task-text-light:#e5e7eb;
+  --badge-color:#f8fafc;
+  --btn-text:#fff;
+  --btn-hover-shadow:0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* BODY */
+body{
+  background:var(--bg-gradient);
+  min-height:100vh;
+  color:var(--text-light);
+  transition: background 0.4s ease,color 0.4s ease;
+}
+
+/* HEADING */
+h2{ letter-spacing:0.6px; font-weight:700; color:var(--heading-color); transition:color .4s ease;}
+
+/* COLUMN */
+.kanban-column{
+  background:var(--column-bg);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border-radius:22px;
+  padding:20px;
+  height:100%;
+  transition:transform .35s ease,box-shadow .35s ease,background .4s ease;
+}
+.kanban-column:hover{ transform:translateY(-6px); box-shadow:0 28px 50px rgba(0,0,0,0.35); }
+
+.kanban-column h5{ font-weight:600; margin-bottom:16px; display:flex; align-items:center; gap:10px; color:var(--heading-color); transition: color .4s ease;}
+
+/* TASK LIST */
+.task-list{
+  min-height:340px;
+  padding:8px;
+  border-radius:16px;
+  background:#f9fafb;
+  transition: background .3s ease;
+}
+.task-list.drag-over{ background:#e0f2fe; transition: background .2s ease;}
+
+/* TASK CARD */
+.task{
+  background: var(--task-bg-dark);
+  color: var(--task-text-light);
+  border-radius:18px;
+  padding:16px 18px;
+  margin-bottom:16px;
+  cursor:grab;
+  box-shadow:0 12px 28px rgba(0,0,0,0.38);
+  transition: transform .25s ease, box-shadow .25s ease, background .3s ease, color .3s ease;
+}
+.task:active{ cursor:grabbing; }
+.task:hover{ transform: scale(1.03); box-shadow: 0 20px 40px rgba(0,0,0,0.45); }
+
+/* TASK CONTENT */
+.task strong{ display:block; font-size:16px; font-weight:600; margin-bottom:6px; }
+.task small{ font-size:12px; }
+.task .badge{ font-size:11px; padding:5px 10px; border-radius:999px; text-transform:capitalize; font-weight:500; margin-right:5px; }
+
+/* PRIORITY COLORS */
+.priority-high{ border-left:6px solid #ef4444; }
+.priority-medium{ border-left:6px solid #f59e0b; }
+.priority-low{ border-left:6px solid #10b981; }
+
+/* DUE DATE COLORS */
+.due-past{ color:red; font-weight:600; }
+.due-today{ color:orange; font-weight:600; }
+.due-future{ color:green; font-weight:600; }
+
+/* BUTTONS */
+.btn-outline-primary,.btn-outline-warning{ border-radius:16px; font-weight:500; padding:8px 16px; color: var(--btn-text); transition: all .25s ease, box-shadow .25s ease; }
+.btn-outline-primary:hover,.btn-outline-warning:hover{ transform:translateY(-2px); box-shadow: var(--btn-hover-shadow); }
+
+/* LIGHT MODE */
+.light-mode{
+  --bg-gradient: linear-gradient(135deg,#6e84bb,#438cc3);
+  --column-bg: #ffffff;
+  --text-light: #111827;
+  --heading-color: #111827;
+  --task-bg-dark: #e2e8f0;
+  --task-text-light: #111827;
+  --badge-color: #111827;
+  --btn-text:#111827;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){ .task-list{ min-height:220px; } }
